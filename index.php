@@ -29,10 +29,10 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
             <label for="">lunghezza chiave: </label>
             <input type="text" name="userLengthPassword">
             <button type="submit">Invia </button>
+            <?php
+            include_once __DIR__ . '/functions.php';
+            ?>
         </form>
-        <?php
-        include_once __DIR__ . '/functions.php';
-        ?>
 
 
     </main>
