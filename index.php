@@ -19,11 +19,25 @@ Scriviamo tutto (logica e layout) in un unico file index.php -->
 
 <body>
     <main>
-        <form action="" method="GET">
+        <form action="./index.php" method="GET">
             <label for="">lunghezza chiave: </label>
-            <input type="text" name="">
+            <input type="text" name="userLengthPassword">
             <button type="submit">Invia </button>
         </form>
+
+        <?php
+
+
+        $userValue = intval($_GET["userLengthPassword"]);
+
+        // echo $userValue;
+
+        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*_";
+        $password = substr( str_shuffle( $chars ), 0, $userValue );
+
+        echo $password;
+
+        ?>
     </main>
 </body>
 
