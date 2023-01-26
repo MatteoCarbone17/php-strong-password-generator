@@ -22,16 +22,17 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
 -->
 
 <body>
-
-
-    <main>
+    <main class="p-5">
         <form action="./index.php" method="GET">
             <label for="">lunghezza chiave: </label>
             <input type="text" name="userLengthPassword">
             <button type="submit">Invia </button>
+            <p class="mt-2">
             <?php
             include_once __DIR__ . '/functions.php';
             ?>
+
+            </p>
         </form>
 
 

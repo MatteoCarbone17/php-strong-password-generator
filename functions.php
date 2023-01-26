@@ -1,14 +1,12 @@
 
-
-
 <?php
 
 $userValue = intval($_GET["userLengthPassword"]);
 
-if ($userValue <= 0) {
+if ($userValue <= 0){
     echo 'inserisci un  numero';
 } else {
-    echo random_bytes($userValue);
+    echo  'La tua password :  '. random_bytes($userValue);
 }
 
 
