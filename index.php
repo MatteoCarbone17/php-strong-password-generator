@@ -1,3 +1,8 @@
+<?php
+include_once __DIR__ . '/functions.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,10 +33,12 @@ Verificato il corretto funzionamento del nostro codice, spostiamo la logica in u
             <input type="number" name="userLengthPassword">
             <button type="submit">Invia </button>
             <p class="mt-2">
-            <?php
-            include_once __DIR__ . '/functions.php';
-            ?>
-
+                <?php
+                if (isset($_GET['userLengthPassword'])) {
+                    $passwordGenerated = generatorPassword($_GET['userLengthPassword']);
+                }
+                echo $passwordGenerated;
+                ?>
             </p>
         </form>
 
